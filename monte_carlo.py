@@ -36,5 +36,5 @@ def monte_carlo_simulator(num, ttm, vol, price, strike):
     price = mean(option_payoff)
     print(price)
 
-monte_carlo_simulator(1000,2,0.41,280,285)
+monte_carlo_simulator(1000,2,0.41,1000,1050)
 
