@@ -18,7 +18,8 @@ fig.add_trace(go.Scatter(x=palantir_df.index, y=palantir_df['Close']))
 
 #customize x and y axis labels
 fig.update_xaxes(
-    title = 'Date',rangeslider_visible=True
+    title = 'Date',
+    rangeslider_visible=True
 )
 
 fig.update_yaxes(
