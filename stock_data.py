@@ -9,12 +9,14 @@ IEX_KEY = os.environ['IEXAPIKEY']
 start = pd.to_datetime('2020-09-01')
 end = pd.to_datetime('today')
 
-palantir_df = data.DataReader('PLTR', 'yahoo', start , end)
-# print(palantir_df)
+ticker = raw_input("Please Enter Ticker Symbol: ").upper()
+print('You entered ticker : ', ticker)
+
+stock_data = data.DataReader(ticker, 'yahoo', start , end)
 
 fig = go.Figure()
 
-fig.add_trace(go.Scatter(x=palantir_df.index, y=palantir_df['Close']))
+fig.add_trace(go.Scatter(x=stock_data.index, y=stock_data['Close']))
 
 #customize x and y axis labels
 fig.update_xaxes(
@@ -27,6 +29,6 @@ fig.update_yaxes(
 )
 
 #add chart title
-fig.update_layout(title = 'PALANTIR')
+fig.update_layout(title = ticker)
 
 fig.show()
