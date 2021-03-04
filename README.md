@@ -3,10 +3,11 @@ Monte Carlo Simulator for Options and stock data visualizer
 
 ## Getting Started
 
-Working on updates at the moment
+Python packages installed in a virtual environment. To activate your virtual environment run the following:
 
-## Troubleshooting
-
+```
+source venv/bin/activate
+```
 
 ## Guide
 
@@ -29,6 +30,18 @@ For testing out the stock data visualizer, run the following command:
 
 ```
 python stock_data.py
+```
+
+When running the above command, you will see the following in your terminal:
+
+```
+Please Enter Ticker Symbol:
+```
+
+When prompted, enter a valid ticker symbol such as `PLTR` or `GME`. It should show the following below:
+
+```
+('You entered ticker : ', 'PLTR')
 ```
 
 The following graph will render in your browser:
